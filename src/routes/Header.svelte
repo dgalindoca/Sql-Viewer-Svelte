@@ -1,13 +1,13 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
+	import logo from '$lib/images/logo.png';
 	import github from '$lib/images/github.svg';
 </script>
 
 <header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+	<div class="logo">
+		<a href="/">
+			<img  src={logo} alt="SvelteKit" />
 		</a>
 	</div>
 
@@ -43,13 +43,14 @@
 
 <style>
 	header {
-		display: flex;
+		display:flex;
 		justify-content: space-between;
 	}
 
 	.corner {
 		width: 3em;
 		height: 3em;
+		padding: 10px;
 	}
 
 	.corner a {
@@ -61,15 +62,34 @@
 	}
 
 	.corner img {
-		width: 2em;
-		height: 2em;
+		width: 7em;
+		height: 5em;
+		object-fit: contain;
+	}
+	.logo{
+		display:block;
+		height: 3em;
+	
+		
+	}
+	.logo a{
+		display: flex;
+		align-items: left;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+
+	}
+	.logo img {
+		width: 7em;
+		height: 7em;
 		object-fit: contain;
 	}
 
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
+		--background: rgba(31, 30, 65, 0.7);
 	}
 
 	svg {
