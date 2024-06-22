@@ -65,7 +65,7 @@
     background-color: #2d2d2d;
     color: #f8f8f2;
     width: 100%;
-    height: 300px;
+    height: 330px;
     border: none;
     outline: none;
     resize: none;

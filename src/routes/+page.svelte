@@ -1,7 +1,5 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+
 </script>
 
 <svelte:head>
@@ -9,51 +7,44 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<div class="landing-page">
+	<div class="title">Bienvenido a SQL Visualizer</div>
+	<div class="subtitle">Transformando el Código SQL en Diagramas Entidad-Relación para una Educación Eficaz</div>
+  
+	<div class="section">
+	  <p>
+		En SQL Visualizer, creemos que la comprensión del diseño de bases de datos es esencial para cualquier estudiante y profesional del mundo de la tecnología. Nuestra herramienta convierte el código SQL en diagramas entidad-relación (ERD) de manera intuitiva y visual, facilitando el aprendizaje y la enseñanza de conceptos complejos de bases de datos.
+	  </p>
+	</div>
+  
+	<div class="section">
+	  <div class="title">Nuestra Misión</div>
+	  <p>
+		Nuestra misión es simplificar la manera en que las personas aprenden sobre bases de datos relacionales y sus estructuras. Con SQL Visualizer, puedes transformar tus scripts SQL en diagramas visuales que representan claramente las entidades, las relaciones y las claves dentro de una base de datos. Esto no solo mejora la comprensión, sino que también hace que el proceso de enseñanza sea más interactivo y atractivo.
+	  </p>
+	</div>
+  </div>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
+  .landing-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
 
-	h1 {
-		width: 100%;
-	}
+  .title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+	color: black;
+  }
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
+  .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
+  .section {
+    margin-bottom: 20px;
+  }
+
 </style>
