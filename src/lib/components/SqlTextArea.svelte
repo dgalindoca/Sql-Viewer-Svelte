@@ -43,10 +43,6 @@
   </script>
   
   <style>
-    main {
-      padding: 1rem;
-    }
-
 
     .code-box {
     background-color: #2d2d2d;
