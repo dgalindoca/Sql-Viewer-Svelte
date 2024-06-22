@@ -2,7 +2,17 @@
     import { onMount } from 'svelte';
     import mermaid from 'mermaid';
   
-    export let diagramText = '';
+    let diagramText = `   erDiagram
+      accTitle: My Entity Relationship Diagram
+      accDescr: My Entity Relationship Diagram Description
+
+      CUSTOMER ||--o{ ORDER : places
+      ORDER ||--|{ LINE-ITEM : contains
+      CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+      DELIVERY-ADDRESS }|..|{ TABLE1 : uses
+      DELIVERY-ADDRESS }|..|{ TABLE2 : uses
+      DELIVERY-ADDRESS }|..|{ TABLE3 : uses
+      `;
   
     onMount(() => {
       mermaid.initialize({ startOnLoad: true });
@@ -18,8 +28,13 @@
     .mermaid {
       margin-top: 20px;
     }
+
+    .viewer-container{
+      background-color: lightblue;
+    }
   </style>
   
-  <p>Prueba</p>
-  <div class="mermaid">{diagramText}</div>
+  <div class="viewer-container">
+    <div class="mermaid">{diagramText}</div>
+  </div>
   

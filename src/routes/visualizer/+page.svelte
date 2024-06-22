@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import SqlTextArea from '../../lib/components/SqlTextArea.svelte';
+    import SqlCoder from '../../lib/components/SqlCoder.svelte';
     import SqlViewer from '../../lib/components/SqlViewer.svelte';
     import 'prismjs/themes/prism-tomorrow.css';
     import 'prismjs/components/prism-sql'; 
@@ -22,7 +22,11 @@
   
   <main>
     <h1 style="color:black">SQL Script Viewer</h1>
-    <SqlTextArea></SqlTextArea>
-    <SqlViewer></SqlViewer>
+    <SqlCoder
+    bind:diagramText = {diagramText}
+    ></SqlCoder>
+    <SqlViewer
+    bind:diagramText = {diagramText}
+    ></SqlViewer>
   </main>
   

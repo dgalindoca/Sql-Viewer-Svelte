@@ -1,9 +1,10 @@
 <script>
     import { onMount } from 'svelte';
-    import SqlViewer from '../../lib/components/SqlViewer.svelte';
     import Prism from 'prismjs';
     import 'prismjs/themes/prism-tomorrow.css';
     import 'prismjs/components/prism-sql'; 
+
+    export let diagramText = '';
 
     let code = `
     -- Escribe tu código SQL aquí...
@@ -14,12 +15,13 @@
 
     async function handleClick(event) {
 		try {
+        console.log('JSON.stringify({ query: code }) :>> ', JSON.stringify({ query: code })); 
         const response = await fetch('https://tu-backend.com/api/diagrama', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ query: 'your-query-here' })
+          body: JSON.stringify({ query: code })
         });
   
         if (!response.ok) {

@@ -9,7 +9,13 @@
 	<slot />
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>Desarrollado por:</p>
+		<ul>
+			<li>Julian Sanchez</li>
+			<li>Daniel Bonilla</li>
+			<li>Ricardo Veloza</li>
+			<li>Daniel Galindo</li>
+		</ul>
 	</footer>
 </div>
 
