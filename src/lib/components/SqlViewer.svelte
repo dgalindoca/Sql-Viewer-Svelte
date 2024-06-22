@@ -20,5 +20,6 @@
     }
   </style>
   
+  <p>Prueba</p>
   <div class="mermaid">{diagramText}</div>
   

@@ -53,8 +53,8 @@
     color: #f8f8f2;
     padding: 20px;
     position: relative;
-    left: -10%;
-    width: 50%;
+    left: 5%;
+    width: 40%;
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
@@ -98,11 +98,8 @@
   }
   </style>
   
-  <main>
-    <h1>SQL Script Viewer</h1>
-    <div class="code-box">
-        <textarea bind:value={code} on:input={updateCode} spellcheck="false"></textarea>
-        <button on:click={handleClick}>Visualizar</button>
-    </div>
-  </main>
+  <div class="code-box">
+    <textarea bind:value={code} on:input={updateCode} spellcheck="false"></textarea>
+    <button on:click={handleClick}>Visualizar</button>
+</div>
   

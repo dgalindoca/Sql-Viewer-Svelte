@@ -51,6 +51,8 @@
 		width: 3em;
 		height: 3em;
 		padding: 10px;
+		margin-right: 10px;
+		margin-top: 10px;
 	}
 
 	.corner a {
