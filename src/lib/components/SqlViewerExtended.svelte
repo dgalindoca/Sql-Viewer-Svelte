@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import mermaid from 'mermaid';
   
-    export let showExtended;
+    export let showExtended; 
     let diagramText = `   erDiagram
     Categories { 
         INTEGER CategoryID PK 
@@ -79,7 +79,7 @@
       `;
     
     function toggleStyle() {
-      showExtended = !showExtended;
+        showExtended = !showExtended;
     }
   
     onMount(() => {
@@ -98,18 +98,15 @@
     }
 
     .viewer-container{
-      background-color: lightblue;
+      background-color: lightblue; 
     }
-
     
   </style>
   
   <div class="viewer-container">
     <div class="mermaid">{diagramText}</div>
-    {#if !showExtended}
     <button on:click={toggleStyle}>
-      Expandir
+      Ocultar
     </button>
-    {/if}
   </div>
   
