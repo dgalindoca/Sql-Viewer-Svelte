@@ -122,6 +122,10 @@
     border-radius: 5px;
     cursor: pointer;
     }
+    button:hover {
+        background-color: #524375;
+    }
+    
 
     
   </style>

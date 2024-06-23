@@ -93,12 +93,38 @@
   </script>
   
   <style>
-    .mermaid {
-      margin-top: 20px;
+.viewer-container {
+     background-color: rgba(31, 30, 65, 0.7);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin: 20px auto;
+      max-width: 70%;
     }
-
-    .viewer-container{
-      background-color: lightblue; 
+  
+    .mermaid {
+      background-color: #E3F2FD; /* Fondo oscuro para el diagrama */
+      color: #f8f9fa; /* Texto claro */
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  
+    button {
+        position: relative;
+        bottom: -10px;
+        right: 20px;
+        left: 400px;
+        padding: 10px 20px;
+        background-color: #322981;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+  
+    button:hover {
+        background-color: #524375;
     }
     
   </style>
