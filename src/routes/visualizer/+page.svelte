@@ -26,16 +26,21 @@
     <h1 style="color:black">SQL Script Viewer</h1>
     <SqlCoder
     bind:diagramText = {diagramText}
+    bind:errorMessage = {errorMessage}
     ></SqlCoder>
-    <SqlViewer
-    bind:diagramText = {diagramText}
-    bind:showExtended = {showExtended}
-    ></SqlViewer>
+    {#key diagramText}
+      <SqlViewer
+      bind:showExtended = {showExtended}
+      bind:diagramText = {diagramText}
+      bind:errorMessage = {errorMessage}
+      ></SqlViewer>
+    {/key}
     <!-- Componente expandido -->
     {#if showExtended}
       <SqlViewerExtended
-      bind:diagramText = {diagramText}
       bind:showExtended = {showExtended}
+      bind:diagramText = {diagramText}
+      bind:errorMessage = {errorMessage}
       ></SqlViewerExtended>
     {/if}
   </main>

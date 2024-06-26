@@ -5,6 +5,7 @@
     import 'prismjs/components/prism-sql'; 
 
     export let diagramText = '';
+    export let errorMessage = '';
 
     let code = `
     -- Escribe tu código SQL aquí...
@@ -14,25 +15,31 @@
     let preElement;
 
     async function handleClick(event) {
-		try {
-        console.log('JSON.stringify({ query: code }) :>> ', JSON.stringify({ query: code })); 
-        const response = await fetch('https://tu-backend.com/api/diagrama', {
+      code = code.replace(/[\r\n]+/gm, "");
+		  try {
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/visualizerSql/parse`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': '*/*',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Connection': 'keep-alive'
           },
-          body: JSON.stringify({ query: code })
+          body: JSON.stringify(code)
         });
   
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          errorMessage = await response.json();
+          errorMessage = errorMessage.response;
+          return;
         }
-        const data = await response.json();
-        diagramText = data.diagramText;
+        diagramText = await response.json();
+        diagramText = diagramText.response;
+        console.log('diagramText :>> ', diagramText);
       } catch (error) {
         errorMessage = `Error: ${error.message}`;
       }
-	}
+	  }
   
     onMount(async () => {
         Prism.highlightAllUnder(preElement);

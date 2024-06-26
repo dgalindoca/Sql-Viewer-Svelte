@@ -17,6 +17,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"dotenv": "^16.4.5",
 		"mermaid": "^10.9.1",
 		"prismjs": "^1.29.0"
 	}
