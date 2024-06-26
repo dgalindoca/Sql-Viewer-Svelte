@@ -27,20 +27,20 @@
       margin-top: 20px;
     }
 
-    .viewer-container{
-      
-      background-color: #E3F2FD; 
-      border: 1px solid #BBDEFB; 
+    .viewer-container {
+  background-color: #E3F2FD;
+  border: 1px solid #BBDEFB;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  width: 45%;
+  height: 69%;
+  border-radius: 12px;
+  overflow: scroll;
+}
 
-      border-radius: 8px; 
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-      position: absolute;
-      top: 190px;
-      left: 660px;
-      width: 600px;
-      height: 395px;
-      border-radius: 12px;
-    }
     .button2{
       position: absolute;
     bottom: 20px;
