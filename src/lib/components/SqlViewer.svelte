@@ -36,7 +36,7 @@
   top: 32%;
   left: 50%;
   width: 45%;
-  height: 69%;
+  height: 60%;
   border-radius: 12px;
   overflow: scroll;
 }
